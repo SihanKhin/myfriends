@@ -8,7 +8,8 @@ const friImgObject = [
     "image/photo_2024-06-06_13-55-02.jpg",
     "image/447196717_431002346385699_7292344898374047271_n.jpg",
     "image/photo_2024-06-06_08-12-17.jpg",
-    "image/photo_2024-06-06_08-18-03.jpg"
+    "image/photo_2024-06-06_08-18-03.jpg",
+    "image/photo_2024-02-22_20-42-18.jpg"
 ];
 const friTextObject = [
     "ប្រូវ័នបែកម៉ា",
@@ -20,10 +21,11 @@ const friTextObject = [
     "ប្រូហាវក្តធំ",
     "ប្រូម៉េងមនុស្សជរ",
     "ប្រូឈុនពូកែងរ",
-    "ប្រូរិទ្ធស្ទាវតាកែវ"
+    "ប្រូរិទ្ធស្ទាវតាកែវ",
+    "សុីហានមនុស្សស្មោះ"
 ];
 
-const render = ()=>{
+const render = () => {
     let currentTextIndex = 0;
     let currentImgIndex = 0;
     document.querySelector(".next-btn").addEventListener("click",()=>{
