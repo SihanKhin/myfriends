@@ -22,18 +22,22 @@ const friTextObject = [
     "ប្រូឈុនពូកែងរ",
     "ប្រូរិទ្ធស្ទាវតាកែវ"
 ];
-let currentTextIndex = 0;
-let currentImgIndex = 0;
-document.querySelector(".next-btn").addEventListener("click",()=>{
-    document.querySelector(".js-text").innerHTML = friTextObject[currentTextIndex];
-    currentTextIndex = (currentTextIndex + 1) % friTextObject.length;
-    document.querySelector("img").src = friImgObject[currentImgIndex];
-    currentImgIndex = (currentImgIndex+1) % friImgObject.length;
-});
-document.querySelector(".pre-btn").addEventListener("click",()=>{
-    document.querySelector(".js-text").innerHTML = friTextObject[currentTextIndex];
-    currentTextIndex = (currentTextIndex - 1 + friTextObject.length) % friTextObject.length;
 
-     document.querySelector("img").src = friImgObject[currentImgIndex];
-    currentImgIndex = (currentImgIndex - 1 + friImgObject.length) % friImgObject.length;
-});
+const render = ()=>{
+    let currentTextIndex = 0;
+    let currentImgIndex = 0;
+    document.querySelector(".next-btn").addEventListener("click",()=>{
+        document.querySelector(".js-text").innerHTML = friTextObject[currentTextIndex];
+        currentTextIndex = (currentTextIndex + 1) % friTextObject.length;
+        document.querySelector("img").src = friImgObject[currentImgIndex];
+        currentImgIndex = (currentImgIndex+1) % friImgObject.length;
+    });
+    document.querySelector(".pre-btn").addEventListener("click",()=>{
+        document.querySelector(".js-text").innerHTML = friTextObject[currentTextIndex];
+        currentTextIndex = (currentTextIndex - 1 + friTextObject.length) % friTextObject.length;
+    
+         document.querySelector("img").src = friImgObject[currentImgIndex];
+        currentImgIndex = (currentImgIndex - 1 + friImgObject.length) % friImgObject.length;
+    });
+}
+render();
